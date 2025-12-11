@@ -12,13 +12,13 @@ def seleccionar_palabras_largas(palabras, longitud_minima):
     resultado = []
 
     # Recorrer la lista de palabras
-    for palabras in palabra:
+    for palabra in palabras:
         # Verificar que cada elemento sea una cadena
         if type(palabra) is not str:
             raise TypeError("Todos los elementos de la lista deben ser cadenas.")
 
         # Comprobar la longitud mínima
-        if len(palabra) > longitud_minima:
+        if len(palabra) >= longitud_minima:
             resultado.append(palabra)
 
     return resultado
